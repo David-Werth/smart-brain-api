@@ -13,10 +13,8 @@ const image = require("./controllers/image");
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'postgresql-solid-20078',
-        user: 'rzfeujbcywvrhd',
-        password: '',
-        database: 'still-everglades-61678'
+        host: process.env.DATABASE_URL,
+        ssl: true
     }
 });
 
